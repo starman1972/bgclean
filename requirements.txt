@@ -3,3 +3,4 @@ rembg
 pillow
 pandas
 requests
+onnxruntime
