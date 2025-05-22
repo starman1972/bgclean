@@ -252,8 +252,8 @@ def main() -> None:
                 type=SUPPORTED_IMAGE_TYPES, key="uploader", label_visibility="collapsed" 
             )
             if uploaded_file:
-                if uploaded_file.id != st.session_state.get("last_uploaded_file_id"):
-                    st.session_state.last_uploaded_file_id = uploaded_file.id
+                if uploaded_file.file_id != st.session_state.get("last_uploaded_file_id"):
+                    st.session_state.last_uploaded_file_id = uploaded_file.file_id
                     img, img_bytes = load_image_from_upload(uploaded_file)
                     if img and img_bytes:
                         update_session_data(img, img_bytes, None) 
